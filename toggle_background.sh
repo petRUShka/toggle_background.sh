@@ -5,12 +5,12 @@ X_THEME_NAME=Xsolorized
 if [ -z "$1" ]
 then
     current_background=$(sed -n 's/[^!]\+Xsolorized\.\(\w\+\)\"/\1/p' ~/.Xresources)
-    if [ "${current_background}" = 'light' ]; then
+    if [ "${current_background}" == 'light' ]; then
         new_background="dark"
     else
         new_background="light"
     fi
-elif [ "${1}" = 'light' ] or [ "${1}" = 'dark' ]
+elif [ "${1}" == 'light' ] || [ "${1}" == 'dark' ]
 then
     new_background="$1"
 else
