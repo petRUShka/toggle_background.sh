@@ -39,7 +39,7 @@ GVIMRC=~/.config/nvim/ginit.vim
 
 If you use both vim and nvim it is a good idea to source gvimrc in nvim or vice versa.
 
-The Xresources colorschemes filenames are `~/.Xsolorized.dark` and `~/.Xsolorized.light` but you can change base, for example:
+By default Xresources colorschemes filenames are expected [solorized colorschemes for Xresources](https://github.com/solarized/xresources): `~/.Xsolorized.dark` and `~/.Xsolorized.light` but you can change basename, for example:
 
 ```
 X_THEME_NAME=Xresources
@@ -48,7 +48,10 @@ X_THEME_NAME=Xresources
 after that change script expects `~/.Xresources.dark` and `~/.Xresources.light`.
 
 # Requirements
-- place dark and light colorschemes for Xresources in `$HOME`, by default `~/.Xsolorized.dark` and `~/.Xsolorized.light` are expected
+- place dark and light colorschemes for Xresources in `$HOME`, by default `~/.Xsolorized.dark` and `~/.Xsolorized.light` are expected. Also it is necessary to include in `~/.Xresources`, for example:
+```
+#include ".Xsolorized.dark"
+```
 - unset [background](https://vimhelp.org/options.txt.html#%27background%27) option in vimrc/init.nvim to vim/nvim guess background (dark\light) by the colorscheme of terminal;
 - set [background](https://vimhelp.org/options.txt.html#%27background%27) in `gvimrc` to `dark` or `light`;
 - vim compiled with [+clientserver](http://vimdoc.sourceforge.net/htmldoc/remote.html): for vim/gvim to change background on the fly;
