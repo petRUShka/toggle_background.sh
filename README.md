@@ -39,7 +39,7 @@ GVIMRC=~/.config/nvim/ginit.vim
 
 If you use both vim and nvim it is a good idea to source gvimrc in nvim or vice versa.
 
-By default Xresources colorschemes filenames are expected [solorized colorschemes for Xresources](https://github.com/solarized/xresources): `~/.Xsolorized.dark` and `~/.Xsolorized.light` but you can change basename, for example:
+By default [solorized colorschemes filenames for Xresources](https://github.com/solarized/xresources) are expected: `~/.Xsolorized.dark` and `~/.Xsolorized.light` but you can change basename, for example:
 
 ```
 X_THEME_NAME=Xresources
